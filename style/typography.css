@@ -1,0 +1,9 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 100%;
+}
+
+b, strong {
+    font-weight: 600;
+}

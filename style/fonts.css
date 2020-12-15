@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap');
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Light'), local('Gilroy-Light'),
+        url('../fonts/Gilroy-Light.woff2') format('woff2'),
+        url('../fonts/Gilroy-Light.woff') format('woff'),
+        url('../fonts/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Extrabold'), local('Gilroy-Extrabold'),
+        url('../fonts/Gilroy-Extrabold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Extrabold.woff') format('woff'),
+        url('../fonts/Gilroy-Extrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
