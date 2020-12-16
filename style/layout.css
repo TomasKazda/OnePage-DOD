@@ -1,0 +1,41 @@
+.container-fluid > header {
+    background: url(../img/virtualni-prohlidka-screenshot-portrait.jpg) center / cover no-repeat fixed #E5E5E5;
+    padding-bottom: 1em;
+}
+.container-fluid > header > div,
+.content {
+    padding: 0 .5em;
+}
+.top-nav a span, .top-nav a.logo-spsse span { display: none; }
+
+/* mobile landscape */
+@media only screen and (min-width: 480px)
+{
+
+}
+/* tablet portrait */
+@media only screen and (min-width: 760px)
+{
+    .top-nav a { padding: .5em; font-size: 22px; }
+    .top-nav a span { display: initial; }
+    [class^="img-"]::before, [class*=" img-"]::before { content: unset; }
+    .logo-spsse::before { 
+        background-image: url("../img/spsse-logo-262x70.svg");
+        font-size: 32px;
+        width: 120px;
+        height: 32px; 
+    }
+
+}
+
+/* tablet landscape */
+@media only screen and (min-width: 960px)
+{
+
+}
+
+/* desktop */
+@media only screen and (min-width: 1200px)
+{
+
+}

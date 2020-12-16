@@ -1,9 +1,79 @@
+:root {
+    --black: #25211F;
+    --white: #E5E5E5;
+    --extrawhite: #F0F0F0;
+    --blue: #2F65B0;
+    --red: #E62117;
+    --yellow: #F58529;
+    --strblue: #357BC2;
+    --elgreen: #00AA80;
+    --itred: #D90000;
+}
+
 html {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 
-b, strong {
+b,
+strong {
     font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Gilroy, sans-serif;
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 1em;
+}
+h1 span {
+    display: block;
+    text-transform: initial;
+    font-size: .8em;
+    padding-top: .2em;
+}
+
+h2 {
+    font-size: 1.35em;
+    text-align: center;
+    padding: 1.5em 0 .75em;
+}
+
+h2 span {
+    color: var(--elgreen);
+}
+
+p {
+    text-align: justify;
+    text-align-last: center;
+}
+
+/* default nav list */
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: block;
+}
+
+nav a {
+    font-family: Gilroy, sans-serif;
+    font-weight: 300;
+    color: var(--black);
+    display: block;
+
+}
+nav a:hover {
+    color: var(--blue);
+    /* font-weight: 800; */
+    text-decoration: overline;
 }
