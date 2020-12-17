@@ -52,24 +52,38 @@
   text-decoration: none;
   color: inherit;
 }
+.btn-outline { 
+  border: 2px solid currentColor;
+  font-weight: 600;
+  min-width: 200px;
+  color: inherit;
+}
 .btn-big {
   font-weight: 800;
+  color: #F0F0F0; /*IE*/
   color: var(--extrawhite);
+  background-color: #2F65B0; /*IE*/
   background-color: var(--blue);
   padding: 1em 3em;
 }
 .btn-live {
   font-size: 1.2em;
+  color: #F0F0F0; /*IE*/
   color: var(--extrawhite);
+  background-color: #D90000; /*IE*/
   background-color: var(--itred);
   font-weight: 600;
   padding: 1em;
   margin: .25em .5em;
 }
 .btn-big:hover, .btn-live:hover {
+  color: #E5E5E5; /*IE*/
   color: var(--white);
   box-shadow: .2em .2em .2rem .1em var(--white);
   transform: translate(-0.1em, -0.1em);
+}
+.btn-outline:hover {
+  text-decoration: underline;
 }
 
 /* FAQ block */
@@ -78,8 +92,59 @@
 }
 
 /* obory info block */
+.obory .str h3 {
+  background-color: #357BC2; /*IE*/
+  background-color: var(--strblue);
+  color: var(--white);
+}
+.obory .ele h3 {
+  background-color: #00AA80; /*IE*/
+  background-color: var(--elgreen);
+  color: var(--white);
+}
+.obory .it h3 {
+  background-color: #D90000; /*IE*/
+  background-color: var(--itred);
+  color: var(--white);
+}
 
-
+.obory .str footer {
+  color: #357BC2; /*IE*/
+  color: var(--strblue);
+}
+.obory .ele footer {
+  color: #00AA80; /*IE*/
+  color: var(--elgreen);
+}
+.obory .it footer {
+  color: #D90000; /*IE*/
+  color: var(--itred);
+}
+.obory dl {
+  padding: 0 1em;
+}
+.obory ul { list-style: none; }
+.obory li::before {
+  content: "\2022";
+  color: red;
+  font-weight: 800;
+  font-size: 1.2em;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.obory .str li::before {
+  color: #357BC2; /*IE*/
+  color: var(--strblue);
+}
+.obory .ele li::before {
+  color: #00AA80; /*IE*/
+  color: var(--elgreen);
+}
+.obory .it li::before {
+  color: #D90000; /*IE*/
+  color: var(--itred);
+}
 
 /* mobil only features */
 @media only screen and (max-width: 759.9px) {
@@ -118,6 +183,7 @@
     padding: 1em;
     bottom: -2rem;
     left: 50%;
+    transform: translateX(-50%);
     margin-left: -20px;
     width: 40px;
     height: 40px;

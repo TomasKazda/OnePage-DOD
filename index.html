@@ -39,17 +39,14 @@
           <strong>Nevzdali jsme se</strong>. Připravili jsme pro vás virtuální
           prohlídku školy ve formátu 360°, díky které si můžete naši průmyslovou
           školu, její učebny a laboratoře prohlédnout doslova ze všech úhlů.
-          Prohlídku jsme doplnili
-          <b>zajímavými informacemi a videi</b> s&nbsp;vyučujícími a garanty
-          oborů. Doufáme, že se vám bude líbit!
+          Prohlídku jsme doplnili <b>zajímavými informacemi a videy</b> 
+          s&nbsp;vyučujícími a garanty oborů. Doufáme, že se vám bude líbit!
         </p>
         <p>
           Pojďme se seznámit, alespoň online. <span class="img-smile"></span>
         </p>
         <p>
-          <a class="btn btn-big" href="https://prohlidka.pslib.cz/"
-            >spustit prohlídku</a
-          >
+          <a class="btn btn-big" href="https://prohlidka.pslib.cz/">spustit prohlídku</a>
         </p>
         <!-- <a class="arrow bounce" href="#"></a> -->
       </div>
@@ -88,7 +85,7 @@
       <section class="content" id="obory">
         <h2>Co u nás můžete studovat?</h2>
         <div class="obory">
-          <div class="str">
+          <div class="str obor">
             <h3 class="accordion">Strojírenství</h3>
             <dl>
               <dt>Základní informace</dt>
@@ -116,11 +113,11 @@
               <dd>Mohou se pustit i do soukromého podnikání. Získané znalosti mohou také rozšířit a prohloubit dalším <b>studiem na vysokých školách</b>.</dd>
             </dl>
             <footer>
-              <p><a class="btn" href="https://pslib.cz/obory/strojirenstvi/zamereni">více informací</a></p>
+              <p><a class="btn btn-outline" href="https://pslib.cz/obory/strojirenstvi/zamereni">více informací</a></p>
             </footer>
           </div>
 
-          <div class="ele">
+          <div class="ele obor">
             <h3 class="accordion">Elektrotechnika</h3>
             <dl>
               <dt>Základní informace</dt>
@@ -147,11 +144,11 @@
               </dd>
             </dl>
             <footer>
-              <p><a class="btn" href="https://pslib.cz/obory/elektrotechnika/zamereni">více informací</a></p>
+              <p><a class="btn btn-outline" href="https://pslib.cz/obory/elektrotechnika/zamereni">více informací</a></p>
             </footer>
           </div>
 
-          <div class="it">
+          <div class="it obor">
             <h3 class="accordion">Informační technologie</h3>
             <dl>
               <dt>Základní informace</dt>
@@ -178,7 +175,7 @@
               </dd>
             </dl>
             <footer>
-              <p><a class="btn" href="https://pslib.cz/obory/informacni-technologie">více informací</a></p>
+              <p><a class="btn btn-outline" href="https://pslib.cz/obory/informacni-technologie">více informací</a></p>
             </footer>
           </div>
         </div>
@@ -251,28 +248,43 @@
       <p><a class="logotyp-spsse btn" href="https://pslib.cz/"></a></p>
     </footer>
     <script>
-      document.querySelectorAll(".accordion")
-      .forEach((h3el) => {
-        h3el.addEventListener("click",
-          (e) => {
-            //deactivate other first
-            // document.querySelectorAll(".accordion").forEach((h3el)=>
-            // {
-            //    if (h3el == e.target) return;
-            //    h3el.classList.remove("active");
-            //    h3el.nextElementSibling.style.maxHeight = null;
-            // });
+        //off accordion on non-mobile
+        const mediaQuery = window.matchMedia('(min-width: 760px)');
+        const handleTabletChange = (e) => {
+            if (e.matches) {
+                document.querySelectorAll(".accordion").forEach((h3el)=>
+                {
+                    h3el.classList.remove("active");
+                    h3el.nextElementSibling.style.maxHeight = null;
+                });
+            }
+        }
+        mediaQuery.addListener(handleTabletChange)
+        handleTabletChange(mediaQuery)
 
-            e.target.classList.toggle("active");
-            let panel = e.target.nextElementSibling;
-            if (panel.style.maxHeight) {
-              panel.style.maxHeight = null;
-            } else {
-              panel.style.maxHeight = panel.scrollHeight + "px";
-            } 
-          }
-        );
-      });
+        document.querySelectorAll(".accordion")
+            .forEach((h3el) => {
+                h3el.addEventListener("click",
+                (e) => {
+                    if (window.matchMedia('(min-width: 760px)').matches) return;
+
+                    //deactivate other first
+                    // document.querySelectorAll(".accordion").forEach((h3el)=>
+                    // {
+                    //    if (h3el == e.target) return;
+                    //    h3el.classList.remove("active");
+                    //    h3el.nextElementSibling.style.maxHeight = null;
+                    // });
+
+                    e.target.classList.toggle("active");
+                    let panel = e.target.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                    } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    } 
+                });
+            });
     </script>
   </body>
 </html>

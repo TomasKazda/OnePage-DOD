@@ -11,25 +11,28 @@
 /* mobile landscape */
 @media only screen and (min-width: 480px)
 {
-
+    .obory dt { margin: 1em 0 .5em; }
 }
 /* tablet portrait */
 @media only screen and (min-width: 760px)
 {
     .top-nav a { padding: .5em; font-size: 22px; }
-    .top-nav a span { display: initial; }
+    .top-nav a span { display: inline-block; }
     [class^="img-"]:hover { transform: scale(1.05); }
-    [class^="img-"]::before, [class*=" img-"]::before { content: unset; }
-    .logo-spsse::before { 
-        background-image: url("../img/spsse-logo-262x70.svg");
-        font-size: 32px;
-        width: 120px;
-        height: 32px; 
-    }
-    .livecards {
-        flex-flow: row wrap;
-        justify-content: center;
-    }
+    [class^="img-"]::before, [class*=" img-"]::before { content: none; }
+    .img-smile::before { content: ""; }
+    .logo-spsse::before { background-image: url("../img/spsse-logo-262x70.svg");
+                          font-size: 32px; width: 120px; height: 32px; }
+    .livecards { flex-flow: row wrap;
+                 justify-content: center; }
+    .obory { display: flex; justify-content: center; }
+    .obory .obor { display: flex; flex-direction: column; flex-basis: 400px; }
+    .obory .obor > dl { flex-grow: 1; }
+    .obory .obor > footer { margin-left: .2em; }
+    .obory .obor h3 { background-color: transparent; text-transform: uppercase; }
+    .obory .str h3 { color: #357BC2; /*IE*/ color: var(--strblue); }
+    .obory .ele h3 { color: #00AA80; /*IE*/ color: var(--elgreen); }
+    .obory .it h3 { color: #D90000; /*IE*/ color: var(--itred); }
 }
 
 /* tablet landscape */
