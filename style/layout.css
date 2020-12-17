@@ -22,13 +22,16 @@
 /* tablet portrait */
 @media only screen and (min-width: 760px)
 {
-    .top-nav a { padding: .5em; font-size: 22px; }
+    html { font-size: 115%; }
+    h1 { font-size: 2.25em; }
+    h2 { font-size: 1.8em; }
+    .top-nav a { padding: .5em; font-size: 1.175em; } 
     .top-nav a span { display: inline-block; }
     [class^="img-"]:hover { transform: scale(1.05); }
     [class^="img-"]::before, [class*=" img-"]::before { content: none; }
     .img-smile::before { content: ""; }
     .logo-spsse::before { background-image: url("../img/spsse-logo-262x70.svg");
-                          font-size: 32px; width: 120px; height: 32px; }
+                          font-size: 1em; width: 7em; height: 2em; }
     .livecards { flex-flow: row wrap;
                  justify-content: center; }
     .buttons { display: flex; justify-content: space-between; max-width: 900px; margin: 0 auto; } 
@@ -41,16 +44,18 @@
     .obory .str h3 { color: #357BC2; /*IE*/ color: var(--strblue); }
     .obory .ele h3 { color: #00AA80; /*IE*/ color: var(--elgreen); }
     .obory .it h3 { color: #D90000; /*IE*/ color: var(--itred); }
+    .faq { display: flex; margin: 0 auto; }
+    .faq > * { flex-basis: 260px; flex-grow: 1; padding: 1em 1.5em}
 }
 
 /* tablet landscape */
 @media only screen and (min-width: 960px)
 {
-
+    html { font-size: 125%; }
 }
 
 /* desktop */
 @media only screen and (min-width: 1200px)
 {
-
+    html { font-size: 135%; }
 }
