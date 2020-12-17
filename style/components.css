@@ -1,3 +1,17 @@
+/* live chat card */
+.livecards {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.livecards li {
+  display: block;
+}
+.livecards a {
+  display: block;
+}
+
 /* navigation bar */
 .top-nav > ul {
   display: flex;
@@ -11,7 +25,7 @@
 }
 
 /* icon images */
-[class^="img-"]::before, [class*=" img-"]::before, .logo-spsse::before {
+[class^="img-"]::before, [class*=" img-"]::before, .logo-spsse::before, .logotyp-spsse::before {
   content: "";
   display: block;
   font-size: 28px;
@@ -19,8 +33,9 @@
   height: 1em;
   background: center / contain no-repeat transparent;
 }
-[class^="img-"]:hover { transform: scale(1.05); }
+[class^="img-"]:hover { transform: scale(1.15); }
 .logo-spsse::before { background-image: url("../img/spsse-logo-70x70.svg"); }
+.logotyp-spsse::before { background-image: url("../img/spsse-logo-262x70.svg"); font-size: 32px; width: 263px; height: 70px; }
 .img-360::before { background-image: url("../img/360.svg"); }
 .img-tree::before { background-image: url("../img/tree.svg"); }
 .img-user-plus::before { background-image: url("../img/user-plus.svg"); }
@@ -31,6 +46,7 @@
 .btn { 
   display: inline-block;
   padding: 1em;
+  text-align: center;
 }
 .btn:hover {
   text-decoration: none;
@@ -40,17 +56,62 @@
   font-weight: 800;
   color: var(--extrawhite);
   background-color: var(--blue);
-  text-align: center;
   padding: 1em 3em;
 }
-.btn-big:hover {
+.btn-live {
+  font-size: 1.2em;
+  color: var(--extrawhite);
+  background-color: var(--itred);
+  font-weight: 600;
+  padding: 1em;
+  margin: .25em .5em;
+}
+.btn-big:hover, .btn-live:hover {
   color: var(--white);
-  box-shadow: .3em .2em .2rem .1em var(--white);
+  box-shadow: .2em .2em .2rem .1em var(--white);
+  transform: translate(-0.1em, -0.1em);
 }
 
+/* FAQ block */
+.faq dt {
+  font-weight: 600;
+}
+
+/* obory info block */
+
+
+
+/* mobil only features */
+@media only screen and (max-width: 759.9px) {
+    /* accordion roller */
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+    .accordion.active, .accordion:hover {
+      background-color: #ccc;
+    }
+    .accordion:after {
+      content: '\002B';
+      color: currentColor;
+      font-weight: 800;
+      float: right;
+    }
+    .active:after {
+      content: "\2212";
+    }
+    .accordion + * {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+}
+
+/* bouncing arrow */
 .arrow { display: none; }
 @media only screen and (min-width: 760px) {
-  /* bouncing arrow */
   .arrow {
     position: relative;
     display: block;

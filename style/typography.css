@@ -3,7 +3,7 @@
     --white: #E5E5E5;
     --extrawhite: #F0F0F0;
     --blue: #2F65B0;
-    --red: #E62117;
+    --red: #ED1F1F;
     --yellow: #F58529;
     --strblue: #357BC2;
     --elgreen: #00AA80;
@@ -48,6 +48,16 @@ h2 {
 
 h2 span {
     color: var(--elgreen);
+}
+
+h3 {
+    font-size: 1.25em;
+    text-align: center;
+    padding: 0.75em 1em;
+}
+
+h3 span {
+    color: var(--red);
 }
 
 p {
