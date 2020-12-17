@@ -72,11 +72,9 @@ nav ul {
     margin: 0;
     padding: 0;
 }
-
 nav li {
     display: block;
 }
-
 nav a {
     font-family: Gilroy, sans-serif;
     font-weight: 300;

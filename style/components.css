@@ -1,3 +1,13 @@
+.black { color: #25211F !important; color: var(--black) !important; }
+.white { color: #E5E5E5 !important; color: var(--white) !important; }
+.extrawhite { color: #F0F0F0 !important; color: var(--extrawhite) !important; }
+.blue { color: #2F65B0 !important; color: var(--blue) !important; }
+.red { color: #ED1F1F !important; color: var(--red) !important; }
+.yellow { color: #F58529 !important; color: var(--yellow) !important; }
+.strblue { color: #357BC2 !important; color: var(--strblue) !important; }
+.elgreen { color: #00AA80 !important; color: var(--elgreen) !important; }
+.itred { color: #D90000 !important; color: var(--itred) !important; }
+
 /* live chat card */
 .livecards {
   display: flex;
@@ -21,7 +31,7 @@
   padding: 1em;
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 1em;
 }
 
 /* icon images */
@@ -35,7 +45,7 @@
 }
 [class^="img-"]:hover { transform: scale(1.15); }
 .logo-spsse::before { background-image: url("../img/spsse-logo-70x70.svg"); }
-.logotyp-spsse::before { background-image: url("../img/spsse-logo-262x70.svg"); font-size: 32px; width: 263px; height: 70px; }
+.logotyp-spsse::before { background-image: url("../img/spsse-logo-262x70.svg"); font-size: 1.5em; width: 197px; height: 52px; }
 .img-360::before { background-image: url("../img/360.svg"); }
 .img-tree::before { background-image: url("../img/tree.svg"); }
 .img-user-plus::before { background-image: url("../img/user-plus.svg"); }
@@ -144,6 +154,21 @@
 .obory .it li::before {
   color: #D90000; /*IE*/
   color: var(--itred);
+}
+
+/* PF block */
+.content.PF { 
+  background-color: #357BC2;
+  background-color: var(--strblue);
+  color: #E5E5E5;
+  color: var(--white);
+}
+.content.PF a { 
+  color: currentColor;
+  text-decoration: underline;
+}
+.content.PF a:hover { 
+  text-decoration: none;
 }
 
 /* mobil only features */
