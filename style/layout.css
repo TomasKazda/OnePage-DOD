@@ -1,14 +1,15 @@
 .body > * { max-width: 1920px; margin-left: auto; margin-right: auto;}
 .body > header {
-    background: url(../img/virtualni-prohlidka-screenshot-portrait.jpg) center / cover no-repeat fixed #E5E5E5;
+    background: /* url(../img/virtualni-prohlidka-screenshot-portrait.jpg) */ bottom center / cover no-repeat fixed #f8f7f5;
     padding-bottom: 1em;
 }
-.body > footer { text-align: center; }
-.top-nav a span, .top-nav a.logo-spsse span { display: none; }
+.body > footer p { margin: 0; }
+/* .top-nav a span,  */
+.top-nav a.logo-spsse span { display: none; }
 .top-nav { overflow: hidden; } /* on hover scale correction */
 
 .content { 
-    padding: 0 .5em 1em;
+    padding: 0 1em 1em;
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
@@ -25,6 +26,13 @@
     html { font-size: 115%; }
     h1 { font-size: 2.25em; }
     h2 { font-size: 1.8em; }
+    .hamburger-row { display: none; }
+    .hamburger-nav { border: none; }
+    .hamburger-nav ul { height: auto; }
+    .body > header { background-image: url(../img/virtualni-prohlidka-screenshot-960.jpg); }
+    .top-nav > ul { flex-direction: row; }
+    .top-nav li { padding: 0; }
+    .top-nav li:nth-child(even) { background-color: transparent; }
     .top-nav a { padding: .5em; font-size: 1.175em; } 
     .top-nav a span { display: inline-block; }
     [class^="img-"]:hover { transform: scale(1.05); }
@@ -36,7 +44,7 @@
                  justify-content: center; }
     .buttons { display: flex; justify-content: space-between; max-width: 900px; margin: 0 auto; } 
     .obory { display: flex; justify-content: center; }
-    .obory .obor { display: flex; flex-direction: column; flex-basis: 400px; }
+    .obory .obor { display: flex; flex-direction: column; flex-basis: 400px; flex-grow: 1; }
     .obory .obor > dl { flex-grow: 1; }
     .buttons > *,
     .obory .obor > footer { margin-left: .2em; }
@@ -58,4 +66,5 @@
 @media only screen and (min-width: 1200px)
 {
     html { font-size: 135%; }
+    .body > header { background-image: url(../img/virtualni-prohlidka-screenshot-1920.jpg); }
 }

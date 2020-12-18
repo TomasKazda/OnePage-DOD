@@ -63,8 +63,8 @@ h3 span {
 }
 
 p {
-    text-align: justify;
-    text-align-last: center;
+    text-align: left;
+    /* text-align-last: center; */
 }
 
 /* default nav list */

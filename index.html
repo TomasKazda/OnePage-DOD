@@ -2,24 +2,36 @@
 <html lang="cs">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width, shrink-to-fit=no"/>
     <title>SPŠSE Liberec - Den Otevřených Dveří</title>
     <link rel="stylesheet" href="style/reboot.css" />
     <link rel="stylesheet" href="style/fonts.css" />
     <!-- <link rel="stylesheet" href="style/icomoon.css"> -->
     <link rel="stylesheet" href="style/typography.css" />
+    <link rel="stylesheet" href="style/hamburger.css">
     <link rel="stylesheet" href="style/components.css" />
     <link rel="stylesheet" href="style/layout.css" />
   </head>
   <body class="body">
     <header>
-      <nav class="top-nav">
+      <input type="checkbox" id="hamburger-checkbox">
+      <div class="hamburger-row">
+          <div class="hamburger">
+              <label for="hamburger-checkbox">
+              <span></span>
+              <span></span>
+              <span></span>
+              </label>
+          </div>
+      </div>
+      <nav class="top-nav hamburger-nav">
         <ul>
           <li><a class="logo-spsse" href="https://pslib.cz/"><span>SPŠSE a VOŠ Liberec</span></a></li>
-          <li><a class="img-360" href="https://prohlidka.pslib.cz/"><span>virtuální prohlídka</span></a></li>
-          <li><a class="img-tree" href="#obory"><span>studijní obory</span></a></li>
-          <li><a class="img-user-plus" href="#prijimacky"><span>přijímací řízení</span></a></li>
-          <li><a class="img-FAQ" href="#faq"><span>FAQ</span></a></li>
+          <li><a class="off-img-360" href="https://prohlidka.pslib.cz/"><span>virtuální prohlídka</span></a></li>
+          <li><a class="off-img-tree" href="#obory"><span>studijní obory</span></a></li>
+          <li><a class="off-img-user-plus" href="#prijimacky"><span>přijímací řízení</span></a></li>
+          <li><a class="off-img-FAQ" href="#faq"><span>FAQ</span></a></li>
         </ul>
       </nav>
       <div class="content">
@@ -36,13 +48,13 @@
           <strong>Nevzdali jsme se</strong>. Připravili jsme pro vás virtuální
           prohlídku školy ve formátu 360°, díky které si můžete naši průmyslovou
           školu, její učebny a laboratoře prohlédnout doslova ze všech úhlů.
-          Prohlídku jsme doplnili <b>zajímavými informacemi a videy</b> 
+          Prohlídku jsme doplnili <b>zajímavými informacemi a videi</b> 
           s&nbsp;vyučujícími a garanty oborů. Doufáme, že se vám bude líbit!
         </p>
         <p>
           Pojďme se seznámit, alespoň online. <span class="img-smile"></span>
         </p>
-        <p>
+        <p class="center">
           <a class="btn btn-big" href="https://prohlidka.pslib.cz/">spustit prohlídku</a>
         </p>
         <!-- <a class="arrow bounce" href="#"></a> -->
@@ -79,7 +91,7 @@
         </ul>
       </section>
 
-      <section class="content" id="obory">
+      <section class="content wider" id="obory">
         <h2>Co u nás můžete studovat?</h2>
         <div class="obory">
           <div class="str obor">
@@ -110,7 +122,7 @@
               <dd>Mohou se pustit i do soukromého podnikání. Získané znalosti mohou také rozšířit a prohloubit dalším <b>studiem na vysokých školách</b>.</dd>
             </dl>
             <footer>
-              <p><a class="btn btn-outline" href="https://pslib.cz/obory/strojirenstvi/zamereni">více informací</a></p>
+              <p class="center"><a class="btn btn-outline" href="https://pslib.cz/obory/strojirenstvi/zamereni">více informací</a></p>
             </footer>
           </div>
 
@@ -141,7 +153,7 @@
               </dd>
             </dl>
             <footer>
-              <p><a class="btn btn-outline" href="https://pslib.cz/obory/elektrotechnika/zamereni">více informací</a></p>
+              <p class="center"><a class="btn btn-outline" href="https://pslib.cz/obory/elektrotechnika/zamereni">více informací</a></p>
             </footer>
           </div>
 
@@ -172,7 +184,7 @@
               </dd>
             </dl>
             <footer>
-              <p><a class="btn btn-outline" href="https://pslib.cz/obory/informacni-technologie">více informací</a></p>
+              <p class="center"><a class="btn btn-outline" href="https://pslib.cz/obory/informacni-technologie">více informací</a></p>
             </footer>
           </div>
         </div>
@@ -180,7 +192,7 @@
 
       <section class="content" id="prijimacky">
         <h2>Informace o přijímacím řízení</h2>
-        <p>Máte-li zájem u nás studovat, ale trochu se ztrácíte ve všech termínech a informacích? Chápeme vás. Připravili jsme pro vás opravdu přehledný postup, jak na <a href="https://pslib.cz/getFile/id:24080/p%C5%99ij%C3%ADmac%C3%AD%20%C5%99%C3%ADzen%C3%AD%20krok%20za%20krokem2021.docx">přijímací řízení krok za krokem (soubor MS Word)</a>.</p>
+        <p>Máte zájem u nás studovat, ale trochu se ztrácíte ve všech termínech a informacích? Chápeme vás. Připravili jsme pro vás opravdu přehledný postup, jak na <a href="https://pslib.cz/getFile/id:24080/p%C5%99ij%C3%ADmac%C3%AD%20%C5%99%C3%ADzen%C3%AD%20krok%20za%20krokem2021.docx">přijímací řízení krok za krokem (soubor MS Word)</a>.</p>
         <p>Neboť žijeme ve složité a nejisté době, kdy nám COVID-19 hází klacky pod nohy, určitě vám doporučujeme sledovat naše <a href="https://pslib.cz/pro-uchazece/prijimaci-zkousky/id:23889/prijimaci-rizeni-pro-skolni-rok-2021-2022">stránky s informacemi o přijímacím řízení</a>, které pečlivě aktualizujeme.</p>
         <p>Zůstaňme v kontaktu! O změnách a novinkách ohledně přijímacího řízení se vždy dozvíte našem webu. Chcete-li, abychom vás informovali i e-mailem, stačí <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=ogS_58hjR0qgvSjQqoj27L5u5cONt5lOhmurkdQTX9lUMEZFUk5VT1BVWFEyVEVCSUlDMDQ5WVJROC4u">vyplnit formulář</a>.</p>
       </section>
@@ -189,7 +201,7 @@
         <h2>Soboty s technikou</h2>
         <p>Slyšeli jste už o našich Sobotách s technikou? Naše workshopy jsou určeny všem <b>žákům 8. a 9. tříd ZŠ</b>, které baví strojírenství, elektrotechnika, informační a komunikační technologie, 3D technologie nebo matematika s fyzikou. Jestliže jste jedním z nich, rádi vás na Sobotách s technikou uvidíme.</p>
         <p>Každý úspěšný účastník obdrží certifikát o absolvování kurzu Soboty s technikou.</p>
-        <p><a class="btn btn-outline strblue" href="https://pslib.cz/pro-uchazece/soboty-s-technikou/">více informací</a></p>
+        <p class="center"><a class="btn btn-outline strblue" href="https://pslib.cz/pro-uchazece/soboty-s-technikou/">více informací</a></p>
       </section>
 
       <section class="content" id="faq">
@@ -221,16 +233,16 @@
             <dd>V současné době již toto není rozhodující. Z obou termínů přijímacích zkoušek nám předáají nejlepší výsledky z ČJ a M (i když zkoušky byly vykonány v jiné škole). Není proto nutné dávat jiný termín oproti prioritě vybrané školy.</dd>
           </div> -->
         </dl>
-        <p><a class="btn btn-outline strblue" href="https://pslib.cz/pro-uchazece/casto-kladene-otazky">zobrazit další otázky</a></p>
+        <p class="center"><a class="btn btn-outline strblue" href="https://pslib.cz/pro-uchazece/casto-kladene-otazky">zobrazit další otázky</a></p>
       </section>
 
       <section class="content">
         <h2>Už nás sledujete?</h2>
         <p>Psssst. Jsme i na <b>sociální sítích</b>. Nenechte si ujít dávku zajímavých zpráv z prostředí naší průmyslové školy, chystané novinky, rozhovory a reportáže našich studentů. <strong>Pojďme se sledovat</strong>.</p>
         <div class="buttons">
-            <p><a class="btn btn-outline blue" href="https://www.facebook.com/pslibofficial/">Facebook</a></p>
-            <p><a class="btn btn-outline yellow" href="https://www.instagram.com/elprumka/">Instagram</a></p>
-            <p><a class="btn btn-outline red" href="https://www.youtube.com/user/prumkaTV/">Youtube</a></p>
+            <p class="center"><a class="btn btn-outline blue" href="https://www.facebook.com/pslibofficial/">Facebook</a></p>
+            <p class="center"><a class="btn btn-outline yellow" href="https://www.instagram.com/elprumka/">Instagram</a></p>
+            <p class="center"><a class="btn btn-outline red" href="https://www.youtube.com/user/prumkaTV/">Youtube</a></p>
         </div>
       </section>
 
@@ -242,14 +254,39 @@
       </section>
     </main>
     <footer>
-      <p><a class="logotyp-spsse btn" href="https://pslib.cz/"></a></p>
+      <p class="center"><a class="logotyp-spsse btn" href="https://pslib.cz/"></a></p>
     </footer>
     <script>
+        let acclist = document.querySelectorAll(".accordion");
+
+        Array.prototype.forEach.call(acclist, function (h3el) {
+            h3el.addEventListener("click",
+            function (e) {
+                if (window.matchMedia('(min-width: 760px)').matches) return;
+
+                //deactivate other first
+                // document.querySelectorAll(".accordion").forEach((h3el)=>
+                // {
+                //    if (h3el == e.target) return;
+                //    h3el.classList.remove("active");
+                //    h3el.nextElementSibling.style.maxHeight = null;
+                // });
+
+                e.target.classList.toggle("active");
+                let panel = e.target.nextElementSibling;
+                if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+                } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        });
+
         //off accordion on non-mobile
         const mediaQuery = window.matchMedia('(min-width: 760px)');
-        const handleTabletChange = (e) => {
+        const handleTabletChange = function (e) {
             if (e.matches) {
-                document.querySelectorAll(".accordion").forEach((h3el)=>
+                Array.prototype.forEach.call(document.querySelectorAll(".accordion"), function (h3el)
                 {
                     h3el.classList.remove("active");
                     h3el.nextElementSibling.style.maxHeight = null;
@@ -258,30 +295,6 @@
         }
         mediaQuery.addListener(handleTabletChange)
         handleTabletChange(mediaQuery)
-
-        document.querySelectorAll(".accordion")
-            .forEach((h3el) => {
-                h3el.addEventListener("click",
-                (e) => {
-                    if (window.matchMedia('(min-width: 760px)').matches) return;
-
-                    //deactivate other first
-                    // document.querySelectorAll(".accordion").forEach((h3el)=>
-                    // {
-                    //    if (h3el == e.target) return;
-                    //    h3el.classList.remove("active");
-                    //    h3el.nextElementSibling.style.maxHeight = null;
-                    // });
-
-                    e.target.classList.toggle("active");
-                    let panel = e.target.nextElementSibling;
-                    if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                    } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                    } 
-                });
-            });
     </script>
   </body>
 </html>
