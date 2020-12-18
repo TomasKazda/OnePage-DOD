@@ -175,6 +175,7 @@
   color: var(--white);
   padding-left: 3em;
   padding-right: 3em;
+  box-sizing: border-box;
 }
 .content.PF a { 
   color: currentColor;

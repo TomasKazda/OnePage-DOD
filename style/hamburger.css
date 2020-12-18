@@ -6,6 +6,7 @@
     padding: 1em 1.5em;
     display: flex;
     justify-content: flex-end;
+    background: url(../img/spsse-logo-70x70.svg) left 1em center / 45px no-repeat;
 }
 .hamburger-nav {
     border-top: 1px solid #25211F;
@@ -81,6 +82,10 @@
 }
 
 @media screen and (max-width: 759.9px) { 
+    #hamburger-checkbox:checked + .hamburger-row {
+        background-image: none;
+    }
+
     #hamburger-checkbox:checked + .hamburger-row .hamburger span:nth-child(1) {
         transform: rotate(45deg);
         top: 12px;
