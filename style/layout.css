@@ -39,6 +39,7 @@
     .hamburger-row { display: none; }
     .hamburger-nav { border: none; }
     .hamburger-nav ul { height: auto; }
+    .hamburger-nav li:first-child { display: block; }
     .body > header { background-image: url(../img/virtualni-prohlidka-screenshot-960.jpg); }
     .top-nav > ul { flex-direction: row; }
     .top-nav li { padding: 0; }

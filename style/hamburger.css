@@ -5,8 +5,8 @@
 .hamburger-row {
     padding: 1em 1.5em;
     display: flex;
-    justify-content: flex-end;
-    background: url(../img/spsse-logo-70x70.svg) left 1em center / 45px no-repeat;
+    justify-content: space-between;
+    /* background: url(../img/spsse-logo-70x70.svg) left 1em center / 45px no-repeat; */
 }
 .hamburger-nav {
     border-top: 1px solid #25211F;
@@ -29,9 +29,8 @@
     width: 40px;
     height: 30px;
     position: relative;
-    cursor: pointer;
 }
-  
+
 .hamburger span {
     position: absolute;
     height: 6px;
@@ -51,6 +50,7 @@
     right: 0;
     bottom: 0;
     margin: 0;
+    cursor: pointer;
 }
 
 .hamburger span:nth-child(1) { 
@@ -81,10 +81,14 @@
     transition: .25s ease-in-out;
 }
 
+.hamburger-nav li:first-child {
+    display: none;
+}
+
 @media screen and (max-width: 759.9px) { 
-    #hamburger-checkbox:checked + .hamburger-row {
+    /* #hamburger-checkbox:checked + .hamburger-row {
         background-image: none;
-    }
+    } */
 
     #hamburger-checkbox:checked + .hamburger-row .hamburger span:nth-child(1) {
         transform: rotate(45deg);
@@ -105,7 +109,7 @@
                     transform var(--rotate-time) var(--move-time);
     }
     #hamburger-checkbox:checked ~ .hamburger-nav ul {
-        height: calc(5 * 3.65em);
+        height: calc(4 * 3.5em);
     }
 }
 
