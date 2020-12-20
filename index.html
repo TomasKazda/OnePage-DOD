@@ -8,11 +8,24 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-EK0MPLFKWT');
+
+      /**
+      * This is GAv3 code! This page using GAv4...
+      */
+      var trackOutboundLink = function(url) {
+        gtag('event', 'click', {
+          'event_category': 'outbound',
+          'event_label': url,
+          'transport_type': 'beacon',
+          'event_callback': function(){document.location = url;}
+        });
+      }
+      //<a href="https://outbound.url" onclick="trackOutboundLink('outbound.url'); return false;">text</a>
     </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width, shrink-to-fit=no"/>
-    <title>SPŠSE Liberec - Den Otevřených Dveří</title>
+    <title>Den Otevřených Dveří | SPŠSE a VOŠ Liberec</title>
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <link rel="stylesheet" href="style/reboot.css" />
     <link rel="stylesheet" href="style/fonts.css" />
