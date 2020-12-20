@@ -7,8 +7,22 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-EK0MPLFKWT');
+
+      /**
+      * Funkce, která v nástroji Analytics sleduje kliknutí na odchozí odkaz.
+      * Tato funkce bere platný řetězec adresy URL jako argument a tento řetězec použije.
+      * jako štítek události. Nastavení metody přenosu na hodnotu „beacon“ umožňuje odeslat požadavek na server
+      * pomocí funkce „navigator.sendBeacon“ prohlížeče, který ji podporuje.
+      */
+      var trackOutboundLink = function(url) {
+        gtag('event', 'click', {
+          'event_category': 'outbound',
+          'event_label': url,
+          'transport_type': 'beacon',
+          'event_callback': function(){document.location = url;}
+        });
+      }
     </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
@@ -194,7 +208,7 @@
               </dd>
             </dl>
             <footer>
-              <p class="center"><a class="btn btn-outline" href="https://pslib.cz/obory/informacni-technologie">více informací</a></p>
+              <p class="center"><a class="btn btn-outline" href="https://pslib.cz/obory/informacni-technologie" onclick="trackOutboundLink('https://pslib.cz/obory/'); return false;">více informací</a></p>
             </footer>
           </div>
         </div>
