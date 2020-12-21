@@ -168,7 +168,7 @@
 }
 
 /* PF block */
-.content.PF { 
+.content.bgblue { 
   background-color: #357BC2;
   background-color: var(--strblue);
   color: #E5E5E5;
@@ -177,12 +177,40 @@
   padding-right: 3em;
   box-sizing: border-box;
 }
-.content.PF a { 
+.content.bgblue a { 
   color: currentColor;
   text-decoration: underline;
 }
-.content.PF a:hover { 
+.content.bgblue a:hover { 
   text-decoration: none;
+}
+
+/* odpočet - počítadlo času */
+.countdown {
+  margin: 0 auto;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 960px;
+}
+
+.countdown > div {
+  flex-basis: 8.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.countdown > div span:first-of-type {
+  font-size: 1em;
+  text-align: center;
+}
+
+.countdown > div span:nth-child(2) {
+  font-size: calc(1.2em + 5vw);
+  text-align: center;
+  line-height: 1.15;
 }
 
 /* mobil only features */
