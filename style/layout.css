@@ -33,7 +33,7 @@
 /* tablet portrait */
 @media only screen and (min-width: 760px)
 {
-    html { font-size: 115%; }
+    html { font-size: 110%; }
     h1 { font-size: 2.25em; }
     h2 { font-size: 1.8em; }
     .hamburger-row { display: none; }
@@ -70,12 +70,12 @@
 /* tablet landscape */
 @media only screen and (min-width: 960px)
 {
-    html { font-size: 125%; }
+    html { font-size: 115%; }
 }
 
 /* desktop */
 @media only screen and (min-width: 1200px)
 {
-    html { font-size: 135%; }
+    html { font-size: 120%; }
     .body > header { background-image: url(../img/virtualni-prohlidka-screenshot-1920.jpg); }
 }
